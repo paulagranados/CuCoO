@@ -44,7 +44,10 @@
 
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Conventus -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Conventus"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Conventus">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Province"/>
+        <rdfs:comment>Relates the conventus with the province it belonged to in adminstrative terms.</rdfs:comment>
+    </owl:ObjectProperty>
     
 
 
@@ -188,7 +191,9 @@
 
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Province -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Province"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Province">
+        <rdfs:comment>It relates the settlement with the province it belonged to in adminsitrative terms.</rdfs:comment>
+    </owl:ObjectProperty>
     
 
 
