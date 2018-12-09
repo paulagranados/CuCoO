@@ -46,7 +46,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Conventus">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Province"/>
-        <rdfs:comment>Relates the conventus with the province it belonged to in adminstrative terms.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus"/>
+        <rdfs:comment>Relates the settlement with the conventus it belonged to.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -192,6 +193,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Province -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Province">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Province"/>
         <rdfs:comment>It relates the settlement with the province it belonged to in adminsitrative terms.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -360,6 +362,12 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cultural_Contact_Context"/>
         <rdfs:comment>The cultural contact situation happens during a process of colonial conquest (e.g. Roman colonisation of the Iberian Penisula).</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus"/>
     
 
 
@@ -630,6 +638,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Province -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Province"/>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Provinciales -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Provinciales">
@@ -762,6 +776,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Astigitanus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Astigitanus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Bastetani -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Bastetani">
@@ -790,6 +812,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cordubensis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cordubensis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Dress -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Dress">
@@ -812,10 +842,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Gaditanus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Gaditanus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Greek -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Greek">
         <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Ethnicity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispalensis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispalensis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus"/>
     </owl:NamedIndividual>
     
 
