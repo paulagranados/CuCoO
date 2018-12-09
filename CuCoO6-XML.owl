@@ -406,10 +406,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cultural_Group -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cultural_Group">
+        <rdfs:comment>Group of people that share similar cultural backgrounds.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cultural_Identity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cultural_Identity">
-        <rdfs:comment>Group of people that share similar cultural backgrounds.</rdfs:comment>
+        <rdfs:comment>Feeling of belonging or identification with a specific cultural group.</rdfs:comment>
     </owl:Class>
     
 
