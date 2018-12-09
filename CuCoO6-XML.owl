@@ -42,6 +42,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Conventus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Conventus"/>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Cultural_Contact_Context -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Cultural_Contact_Context">
@@ -80,6 +86,12 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cultural_Contact_Type"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Cultural_Group_Attested -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Cultural_Group_Attested"/>
     
 
 
@@ -174,18 +186,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Province -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Province"/>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Style -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_Style">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cultural_Contact_Trait"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_ethnic_group_attested -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Has_ethnic_group_attested">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cultural_Contact_Index"/>
     </owl:ObjectProperty>
     
 
