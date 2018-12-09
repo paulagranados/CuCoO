@@ -367,7 +367,9 @@
 
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus">
+        <rdfs:comment>Roman administrative entitiy of control over the teritory that referred to the assembly of communities of indigenous and Roman citizens without fixed geographical boundaries.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -640,7 +642,9 @@
 
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Province -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Province"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Province">
+        <rdfs:comment>Roman territorial administrative demarcation of the teritory.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -862,6 +866,36 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispalensis">
         <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Conventus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispania_Baetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispania_Baetica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Province"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispania_Citerior -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispania_Citerior">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Province"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispania_Tarraconensis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispania_Tarraconensis"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispania_Ulterior -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Hispania_Ulterior">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Province"/>
     </owl:NamedIndividual>
     
 
