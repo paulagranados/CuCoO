@@ -442,7 +442,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cultural_Identity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Cultural_Identity">
-        <rdfs:comment>Feeling of belonging or identification with a specific cultural group.</rdfs:comment>
+        <rdfs:comment>Expression of belonging or identification with a specific cultural group.</rdfs:comment>
     </owl:Class>
     
 
@@ -846,6 +846,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Female -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Female">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Gender"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Gaditanus -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Gaditanus">
@@ -934,6 +942,14 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Legend -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Legend"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Male -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Male">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO6/Gender"/>
+    </owl:NamedIndividual>
     
 
 
