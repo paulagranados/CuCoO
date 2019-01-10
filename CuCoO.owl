@@ -147,6 +147,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Has_Iconography -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Has_Iconography"/>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Has_Identity -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Has_Identity">
