@@ -190,6 +190,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Has_Metrology -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Has_Metrology"/>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Has_Province -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Has_Province">
