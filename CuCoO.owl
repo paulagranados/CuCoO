@@ -242,19 +242,19 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Cives_Latini -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivesLatini -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Cives_Latini">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Individual_Legal_status"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivesLatini">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
         <rdfs:comment>Class of citizens who held the Latin right &apos;Ius latii&apos;. Originally refered to citizens of the Latin league who came under Roman control at the close of the Latin war.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Cives_Romani -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivesRomani -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Cives_Romani">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Individual_Legal_status"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivesRomani">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
         <rdfs:comment>Full Roman citizens with full legal protection under Roman law.</rdfs:comment>
     </owl:Class>
     
@@ -269,36 +269,36 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas_Foederata -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasFoederata -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas_Foederata">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasFoederata">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas"/>
         <rdfs:comment>City/state individually bound to Rome by formal treaty (foedus). Although they remained formally independent, the civitates foederatae in effect surrendered their foreign relation to Rome, to which they were bound by perpetual alliance.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas_Latina -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasLatina -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas_Latina">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasLatina">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas"/>
         <rdfs:comment>City/state whose citizens have been granted Latin rights &apos;ius latii&apos;.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas_Liberae -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasLiberae -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas_Liberae">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasLiberae">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas"/>
         <rdfs:comment>&apos;Free states&apos; which have been granted specific priviledges.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas_Stipendiaria -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasStipendiaria -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas_Stipendiaria">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasStipendiaria">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas"/>
         <rdfs:comment>&apos;Allied state/community&apos;. Most inferior legal status granted to a civitas insserted into the Roman system as a tributary state.</rdfs:comment>
     </owl:Class>
@@ -314,18 +314,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Colonia_Iulia -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ColoniaIulia -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Colonia_Iulia">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ColoniaIulia">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Colonia"/>
         <rdfs:comment>Colonia founded by individuals of the Gens Iulia.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Colonia_Triumphalis -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ColoniaTriumphalis -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Colonia_Triumphalis">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ColoniaTriumphalis">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Colonia"/>
     </owl:Class>
     
@@ -344,6 +344,15 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Conventus">
         <rdfs:comment>Roman administrative entitiy of control over the teritory that referred to the assembly of communities of indigenous and Roman citizens without fixed geographical boundaries.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalPhenomena"/>
+        <rdfs:comment>Interaction amongst at least two communities with different cultural and ethnical backgrounds.</rdfs:comment>
     </owl:Class>
     
 
@@ -421,15 +430,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Cultural_Contact -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Cultural_Contact">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalPhenomena"/>
-        <rdfs:comment>Interaction amongst at least two communities with different cultural and ethnical backgrounds.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Culture -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Culture">
@@ -486,7 +486,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Freeman -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Freeman">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Individual_Legal_status"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
     </owl:Class>
     
 
@@ -509,9 +509,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Individual_Legal_status -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Individual_Legal_status">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
         <rdfs:comment>Individual legal status according to Roman law.</rdfs:comment>
     </owl:Class>
@@ -562,36 +562,36 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium_Cesarianus -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumCesarianus -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium_Cesarianus">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumCesarianus">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium"/>
         <rdfs:comment>Municipium founded by Cesar.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium_Flavium -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumFlavium -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium_Flavium">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumFlavium">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium"/>
         <rdfs:comment>Municipium founded by individuals of the Gens Flavia.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium_Iulium -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumIulium -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium_Iulium">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumIulium">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium"/>
         <rdfs:comment>Municipium founded by individuals of the Gens Iulia.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium_Triumphalis -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumTriumphalis -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium_Triumphalis">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumTriumphalis">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium"/>
     </owl:Class>
     
@@ -600,7 +600,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Peregrini -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Peregrini">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Individual_Legal_status"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
         <rdfs:comment>Any person who was not a full Roman citizen.</rdfs:comment>
     </owl:Class>
     
@@ -626,7 +626,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Provinciales -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Provinciales">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Individual_Legal_status"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
         <rdfs:comment>People who fell under Roman influence, or control, but who lacked even the rights of the Foederati, essentially having only the rights of the ius gentium.</rdfs:comment>
     </owl:Class>
     
@@ -666,7 +666,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Slave -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Slave">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Individual_Legal_status"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
     </owl:Class>
     
 
@@ -683,7 +683,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Socii -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Socii">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Individual_Legal_status"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
         <rdfs:comment>Socii or foederati: citizens of states which had treaty obligations with Rome, under which typically certain legal rights of the state&apos;s citizens under Roman law were exchanged for agreed levels of military service, i.e. the Roman magistrates had the right to levy soldiers for the Roman legions from those states. However, foederati states that had at one time been conquered by Rome were exempt from payment of tribute to Rome due to their treaty status.</rdfs:comment>
     </owl:Class>
     
