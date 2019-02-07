@@ -47,6 +47,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAspect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAspect"/>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCarving -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCarving">
@@ -59,9 +65,14 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasContent -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasContent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EpigraphicInscription"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasContext"/>
     
 
 
@@ -70,33 +81,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasConventus">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Conventus"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactContext -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactContext">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactContext"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactFeature -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactFeature">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactFeature"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactType -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactType">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PermeableCulturalContact"/>
     </owl:ObjectProperty>
     
 
@@ -178,6 +162,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMaterial"/>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMeasure -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMeasure">
@@ -204,6 +194,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasRelationship"/>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasReligion -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasReligion">
@@ -218,6 +214,12 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasTrait -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasTrait"/>
     
 
 
