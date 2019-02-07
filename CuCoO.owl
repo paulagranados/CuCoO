@@ -23,6 +23,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/HasEthnicityAttested -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/HasEthnicityAttested"/>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IsSubsumedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IsSubsumedBy"/>
@@ -40,6 +46,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCarving -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCarving">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Sculpture"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Carving"/>
     </owl:ObjectProperty>
     
@@ -48,6 +55,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasConventus -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasConventus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Conventus"/>
     </owl:ObjectProperty>
     
@@ -61,10 +69,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactFeature"/>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactIndex -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactIndex">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactIndex"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
     </owl:ObjectProperty>
     
 
@@ -72,16 +86,8 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactType -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContactType">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalGroupAttested -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalGroupAttested">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalGroup"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PermeableCulturalContact"/>
     </owl:ObjectProperty>
     
 
@@ -90,16 +96,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalInfluence">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalGroup"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Culture"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalPhenomenon -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalPhenomenon">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
     </owl:ObjectProperty>
     
 
@@ -107,7 +103,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasDimension -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasDimension">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
     </owl:ObjectProperty>
     
 
@@ -153,7 +149,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasLanguage -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasLanguage">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Legend"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
     </owl:ObjectProperty>
     
 
@@ -225,11 +221,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Borrowing -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Appearance -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Borrowing">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Permeable"/>
-        <rdfs:comment>Adoption of cultural traits for a certain period of time that are later substituted again.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Appearance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
     </owl:Class>
     
 
@@ -238,24 +233,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Carving">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivesLatini -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivesLatini">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
-        <rdfs:comment>Class of citizens who held the Latin right &apos;Ius latii&apos;. Originally refered to citizens of the Latin league who came under Roman control at the close of the Latin war.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivesRomani -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivesRomani">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
-        <rdfs:comment>Full Roman citizens with full legal protection under Roman law.</rdfs:comment>
     </owl:Class>
     
 
@@ -269,38 +246,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasFoederata -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Coin -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasFoederata">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas"/>
-        <rdfs:comment>City/state individually bound to Rome by formal treaty (foedus). Although they remained formally independent, the civitates foederatae in effect surrendered their foreign relation to Rome, to which they were bound by perpetual alliance.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasLatina -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasLatina">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas"/>
-        <rdfs:comment>City/state whose citizens have been granted Latin rights &apos;ius latii&apos;.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasLiberae -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasLiberae">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas"/>
-        <rdfs:comment>&apos;Free states&apos; which have been granted specific priviledges.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasStipendiaria -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CivitasStipendiaria">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Civitas"/>
-        <rdfs:comment>&apos;Allied state/community&apos;. Most inferior legal status granted to a civitas insserted into the Roman system as a tributary state.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Coin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
     </owl:Class>
     
 
@@ -310,23 +259,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Colonia">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementLegalStatus"/>
         <rdfs:comment>City founded ex-novo by Roman colonisers or maximum legal status granted to a settlement.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ColoniaIulia -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ColoniaIulia">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Colonia"/>
-        <rdfs:comment>Colonia founded by individuals of the Gens Iulia.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ColoniaTriumphalis -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ColoniaTriumphalis">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Colonia"/>
     </owl:Class>
     
 
@@ -343,7 +275,8 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Conventus -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Conventus">
-        <rdfs:comment>Roman administrative entitiy of control over the teritory that referred to the assembly of communities of indigenous and Roman citizens without fixed geographical boundaries.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementAdministrativeOrganisation"/>
+        <rdfs:comment>Roman administrative entitiy of control over the territory, smaller than a province, that referred to the assembly of communities of indigenous and Roman citizens.</rdfs:comment>
     </owl:Class>
     
 
@@ -351,8 +284,8 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContact -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContact">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalPhenomena"/>
-        <rdfs:comment>Interaction amongst at least two communities with different cultural and ethnical backgrounds.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy"/>
+        <rdfs:comment>Refers to the phenomenon of interaction amongst at least two communities with different cultural and ethnical backgrounds.</rdfs:comment>
     </owl:Class>
     
 
@@ -360,6 +293,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAspects -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAspects">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactFeature"/>
         <rdfs:comment></rdfs:comment>
         <rdfs:comment>Character of the cultural contact situation (e.g. Economic, the evidence can proove the establishment of some economic relationship amongst the different comunities involved in the situation of cultural contact).</rdfs:comment>
     </owl:Class>
@@ -369,14 +303,25 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactContext -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactContext">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactFeature"/>
         <rdfs:comment>Refers to the context in which the situation of cultural contact takes place (e.g. in a context of trade, the main objective behind the cultural contact is economic profit).</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactIndex -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactFeature -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactIndex">
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactFeature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy"/>
+        <rdfs:comment>Refers to any cultural contact feature that can be identified in the entities. For example, cultural contact traits or cultural contact aspects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy"/>
         <rdfs:comment>Different features of the evidence where cutlural contact can be demonstrated (e.g. in the iconography of the coins).</rdfs:comment>
     </owl:Class>
     
@@ -385,6 +330,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRelationship -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRelationship">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactFeature"/>
         <rdfs:comment>Relationship established amongst the different groups involved in the cultural contact situation.</rdfs:comment>
     </owl:Class>
     
@@ -393,23 +339,8 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactFeature"/>
         <rdfs:comment>Characteristic of human action accquired and transmited by any kind of communication in a situation of cultural contact.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactType -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactType">
-        <rdfs:comment>Types of cultural contact (e.g. Permeable and impermeable).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalGroup -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalGroup">
-        <rdfs:comment>Group of people that share similar cultural backgrounds.</rdfs:comment>
     </owl:Class>
     
 
@@ -417,15 +348,8 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy"/>
         <rdfs:comment>Expression of belonging or identification with a specific cultural group.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalPhenomena -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalPhenomena">
-        <rdfs:comment>Cultural situations that have an efffect in the community.</rdfs:comment>
     </owl:Class>
     
 
@@ -433,7 +357,8 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Culture -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Culture">
-        <rdfs:comment>Manifestations of human intellectual achievement and social behaviour regarded collectively.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
+        <rdfs:comment>Manifestations of human intellectual achievement and social behaviour regarded collectively that can be transmitted by interaction.</rdfs:comment>
     </owl:Class>
     
 
@@ -442,6 +367,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Dimension">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Dress -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Dress">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Appearance"/>
     </owl:Class>
     
 
@@ -455,11 +388,16 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Emulation -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Emulation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Permeable"/>
-        <rdfs:comment>Copy of new cultural traits with changes.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EpigraphicInscription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EpigraphicInscription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
     </owl:Class>
     
 
@@ -478,15 +416,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Ethnicity">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
-        <rdfs:comment>Largest social group of which the individuals are members.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Freeman -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Freeman">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
+        <rdfs:comment>Refers to the &apos;self-conscious identification of a group with a series of cultural traits, plus notions of shared history shared territory, kinship and common descent which differentiate it from other groups&apos;.</rdfs:comment>
     </owl:Class>
     
 
@@ -500,10 +430,27 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Impermeable -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/HairStyle -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Impermeable">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactType"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/HairStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Appearance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Iconography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Iconography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ImpermeableCulturalContact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ImpermeableCulturalContact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContact"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PermeableCulturalContact"/>
         <rdfs:comment>Situation of cultural contact (e.g. Roman foundation of a colonia) where there is no evidence for cultural influence (e.g. no appearance of indigenous influences in the material culture).</rdfs:comment>
     </owl:Class>
     
@@ -513,24 +460,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
-        <rdfs:comment>Individual legal status according to Roman law.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Integration -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Integration">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Permeable"/>
-        <rdfs:comment>Copy of new cultural elements without changes.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Legend -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Legend">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
+        <rdfs:comment>Person legal status according to Roman law.</rdfs:comment>
     </owl:Class>
     
 
@@ -544,11 +474,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Loan -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Materiality -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Loan">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Permeable"/>
-        <rdfs:comment>Incorporation of Loan words taken out of context such as the Latin toponym of a settlement. In those cases in which the toponym already existis in an indigenuos language but is not longer used, it should be taken as substitution.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Materiality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
     </owl:Class>
     
 
@@ -562,54 +491,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumCesarianus -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PermeableCulturalContact -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumCesarianus">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium"/>
-        <rdfs:comment>Municipium founded by Cesar.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumFlavium -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumFlavium">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium"/>
-        <rdfs:comment>Municipium founded by individuals of the Gens Flavia.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumIulium -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumIulium">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium"/>
-        <rdfs:comment>Municipium founded by individuals of the Gens Iulia.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumTriumphalis -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MunicipiumTriumphalis">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Municipium"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Peregrini -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Peregrini">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
-        <rdfs:comment>Any person who was not a full Roman citizen.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Permeable -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Permeable">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactType"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PermeableCulturalContact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContact"/>
         <rdfs:comment>Situation of cultural contact (e.g. Roman conquest of the Iberian Peninsula) where there is evidence for cultural influence (e.g. appearance of Roman influences in the material culture).</rdfs:comment>
     </owl:Class>
     
@@ -618,16 +503,8 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Province -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Province">
-        <rdfs:comment>Roman territorial administrative demarcation of the teritory.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Provinciales -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Provinciales">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
-        <rdfs:comment>People who fell under Roman influence, or control, but who lacked even the rights of the Foederati, essentially having only the rights of the ius gentium.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementAdministrativeOrganisation"/>
+        <rdfs:comment>Roman territorial administrative demarcation of the territory.</rdfs:comment>
     </owl:Class>
     
 
@@ -636,6 +513,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Religion">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
+        <rdfs:comment>Person religious believes and practices.</rdfs:comment>
     </owl:Class>
     
 
@@ -649,24 +527,35 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Sculpture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Sculpture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementAdministrativeOrganisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementAdministrativeOrganisation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementLegalStatus -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementLegalStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
         <rdfs:comment>City legal status according to Roman law.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Slave -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Slave">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
     </owl:Class>
     
 
@@ -680,15 +569,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Socii -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Socii">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/IndividualLegalStatus"/>
-        <rdfs:comment>Socii or foederati: citizens of states which had treaty obligations with Rome, under which typically certain legal rights of the state&apos;s citizens under Roman law were exchanged for agreed levels of military service, i.e. the Roman magistrates had the right to levy soldiers for the Roman legions from those states. However, foederati states that had at one time been conquered by Rome were exempt from payment of tribute to Rome due to their treaty status.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Style -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Style">
@@ -697,20 +577,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Substitution -->
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Substitution">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Permeable"/>
-        <rdfs:comment>Exchange of a cultural element by other (e.g. the subsitution of the indigenous toponyms in coins by the Latin toponyms).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Syncretism -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Syncretism">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Permeable"/>
-        <rdfs:comment>Generation of a new cultural trait from the combination of others (e.g. new iconography for the representation of a god based in the combination of the symnbols of other preexisting deities).</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
     </owl:Class>
     
 
@@ -728,7 +598,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Unequal">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRelationship"/>
-        <rdfs:comment>Relationship in which the groups involved are in different economic, social or political levels (e.g. one group is under the control of other group).</rdfs:comment>
+        <rdfs:comment>Relationship in which the groups involved are in different  levels (e.g. one group is under the control of other group).</rdfs:comment>
     </owl:Class>
     
 
@@ -792,7 +662,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Coinage -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Coinage">
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactIndex"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
     </owl:NamedIndividual>
     
 
@@ -816,7 +686,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Epigraphy -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Epigraphy">
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactIndex"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
     </owl:NamedIndividual>
     
 
@@ -901,7 +771,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Iberian">
         <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Ethnicity"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Legend"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
     </owl:NamedIndividual>
     
 
@@ -923,7 +793,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Latin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Latin">
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Legend"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
     </owl:NamedIndividual>
     
 
@@ -953,7 +823,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Man_Made_Object -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Man_Made_Object">
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactIndex"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
     </owl:NamedIndividual>
     
 
@@ -1018,7 +888,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Phoenician">
         <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Ethnicity"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Legend"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
     </owl:NamedIndividual>
     
 
@@ -1033,8 +903,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Punic">
         <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Ethnicity"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Legend"/>
-        <owl:backwardCompatibleWith>http://nomisma.org/id/hispano-punic</owl:backwardCompatibleWith>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
     </owl:NamedIndividual>
     
 
@@ -1064,7 +933,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement">
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactIndex"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRecipient"/>
     </owl:NamedIndividual>
     
 
