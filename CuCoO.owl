@@ -108,6 +108,8 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalIdentityAttested -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalIdentityAttested">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
         <rdfs:comment>Relates a settlement with the cultures attested in the territory.</rdfs:comment>
     </owl:ObjectProperty>
     
