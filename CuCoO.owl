@@ -60,7 +60,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAspect">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAspects"/>
-        <rdfs:comment>Relates a CulutralContactRecipient (e.g. coin) with the CulutralContactAspect featured (e.g. Linguistic).</rdfs:comment>
+        <rdfs:comment>Relates a CulutralContactAgent (e.g. coin) with the CulutralContactAspect featured (e.g. Linguistic).</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -68,10 +68,9 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCarving -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCarving">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EpigraphicInscription"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Sculpture"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Carving"/>
-        <rdfs:comment>Relates sculpture and EpigraphicInscription with the type of carving that it displays (e.g. low relief).</rdfs:comment>
+        <rdfs:comment>Relates an object with the type of carving that it displays (e.g. low relief).</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -90,7 +89,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasContext">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactContext"/>
-        <rdfs:comment>Relates a CulturalConceptRecipient  (e.g. sculpture) with the CulturalContact Context whose finding is related to (e.g. war).</rdfs:comment>
+        <rdfs:comment>Relates a CulturalConceptAgent (e.g. sculpture) with the CulturalContact Context whose finding is related to (e.g. war).</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -98,9 +97,9 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasConventus -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasConventus">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Conventus"/>
-        <rdfs:comment>relates a setllement (e.g. Gades) with the conventus it belonged to (e.g. Conventus Gaditanus).</rdfs:comment>
+        <rdfs:comment>relates a settlement (e.g. Gades) with the conventus it belonged to (e.g. Conventus Gaditanus).</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -119,11 +118,9 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasIconography -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasIconography">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Coin"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EpigraphicInscription"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Sculpture"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Iconography"/>
-        <rdfs:comment>Relates a sculpture, a coin or a EpographicInscription with the iconography that it displays.</rdfs:comment>
+        <rdfs:comment>Relates a sculpture, a coin or a EpigraphicInscription with the iconography that it displays.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -140,9 +137,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMaterial -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMaterial">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Coin"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EpigraphicInscription"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Sculpture"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Material"/>
         <rdfs:comment>Relates epigraphicinscription, coin and sculpture to the material they are made of.</rdfs:comment>
     </owl:ObjectProperty>
@@ -152,7 +147,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMeasure -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMeasure">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Measure"/>
         <rdfs:comment>Relates sculpture, coin and epigraphicinscription to their measures.</rdfs:comment>
     </owl:ObjectProperty>
@@ -192,7 +187,8 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasProvince -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasProvince">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Conventus"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Province"/>
         <rdfs:comment>Relates a settlement to the province it belonged to.</rdfs:comment>
     </owl:ObjectProperty>
@@ -222,7 +218,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasText -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasText">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
         <rdfs:comment>Relates an epigraphic inscription or a coin with the text it displays.</rdfs:comment>
     </owl:ObjectProperty>
@@ -297,7 +293,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Coin -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Coin">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object"/>
     </owl:Class>
     
 
@@ -431,7 +427,7 @@ regarded collectively and associated with a culturally constructed group identit
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EpigraphicInscription -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EpigraphicInscription">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object"/>
     </owl:Class>
     
 
@@ -524,6 +520,14 @@ regarded collectively and associated with a culturally constructed group identit
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PermeableCulturalContact -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PermeableCulturalContact">
@@ -597,7 +601,7 @@ regarded collectively and associated with a culturally constructed group identit
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Sculpture -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Sculpture">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object"/>
     </owl:Class>
     
 
