@@ -393,6 +393,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy"/>
+        <rdfs:comment>Refers to the elements that constitue a person cultural identity.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Culture -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Culture">
@@ -440,7 +449,7 @@ regarded collectively and associated with a culturally constructed group identit
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Identity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
         <rdfs:comment>Refers to the &apos;self-conscious identification of a group with a series of cultural traits, plus notions of shared history shared territory, kinship and common descent which differentiate it from other groups&apos;.</rdfs:comment>
     </owl:Class>
     
@@ -449,7 +458,7 @@ regarded collectively and associated with a culturally constructed group identit
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/GenderIdentity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/GenderIdentity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Identity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
         <rdfs:comment>that aspect of a person conceptualization wich results from identification with a gender.</rdfs:comment>
     </owl:Class>
     
@@ -467,14 +476,6 @@ regarded collectively and associated with a culturally constructed group identit
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Iconography">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Identity -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Identity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy"/>
     </owl:Class>
     
 
@@ -543,7 +544,7 @@ regarded collectively and associated with a culturally constructed group identit
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PersonLegalStatus -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PersonLegalStatus">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Identity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
         <rdfs:comment>Person legal status according to Roman law.</rdfs:comment>
     </owl:Class>
     
@@ -587,7 +588,7 @@ regarded collectively and associated with a culturally constructed group identit
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ReligiousIdentity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ReligiousIdentity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Identity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
         <rdfs:comment>Refers to a person or a gruop believes and practices.</rdfs:comment>
     </owl:Class>
     
