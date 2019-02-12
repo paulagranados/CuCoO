@@ -84,7 +84,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAspect -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAspect">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAspects"/>
         <rdfs:comment>Relates a CulutralContactAgent (e.g. coin) with the CulutralContactAspect featured (e.g. Linguistic).</rdfs:comment>
     </owl:ObjectProperty>
@@ -115,7 +115,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasContext -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasContext">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactContext"/>
         <rdfs:comment>Relates a CulturalConceptAgent (e.g. sculpture) with the CulturalContact Context whose finding is related to (e.g. war).</rdfs:comment>
     </owl:ObjectProperty>
@@ -219,7 +219,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasRelationship -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasRelationship">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRelationship"/>
         <rdfs:comment>It relates a cultural contact recipient to the kind of cultural contact relationship it is related to.</rdfs:comment>
     </owl:ObjectProperty>
@@ -269,7 +269,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasTrait -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasTrait">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
         <rdfs:comment>Relates a CulturalContactRecipient with the CultursalTrait it displays.</rdfs:comment>
     </owl:ObjectProperty>
@@ -279,7 +279,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/isAssociatedWith -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/isAssociatedWith">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity"/>
         <rdfs:comment>Associates a CulturalContactTrait with a cultural identity.</rdfs:comment>
@@ -366,20 +366,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy"/>
+        <rdfs:comment>Refers to things and people that embody and enact cultural meaning.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContact -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy"/>
         <rdfs:comment>Refers to the phenomenon of interaction amongst at least two communities with different cultural and ethnical backgrounds.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entitiy"/>
-        <rdfs:comment>Refers to things or people that embody cultural contact meaning.</rdfs:comment>
     </owl:Class>
     
 
@@ -571,7 +571,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Person -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Person">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
     </owl:Class>
     
 
@@ -640,7 +640,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
     </owl:Class>
     
 
@@ -699,7 +699,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Thing -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Thing">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
     </owl:Class>
     
 
@@ -789,7 +789,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Coinage -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Coinage">
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
     </owl:NamedIndividual>
     
 
@@ -813,7 +813,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Epigraphy -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Epigraphy">
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
     </owl:NamedIndividual>
     
 
@@ -950,7 +950,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Man_Made_Object -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Man_Made_Object">
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
     </owl:NamedIndividual>
     
 
@@ -1060,7 +1060,7 @@
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement">
-        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactAgent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
     </owl:NamedIndividual>
     
 
