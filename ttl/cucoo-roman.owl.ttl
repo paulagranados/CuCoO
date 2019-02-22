@@ -35,7 +35,13 @@ cucoo:hasAdministrativeOrganisation rdf:type owl:ObjectProperty .
 :inConventus rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf cucoo:hasAdministrativeOrganisation ;
              rdfs:domain cucoo:Settlement ;
-             rdfs:range :Conventus ;
+             rdfs:range [ rdf:type owl:Restriction ;
+                          owl:onProperty cucoo:hasAdministrativeDenomination ;
+                          owl:allValuesFrom [ rdf:type owl:Class ;
+                                              owl:oneOf ( :Conventus
+                                                        )
+                                            ]
+                        ] ;
              rdfs:comment "relates a settlement (e.g. Gades) with the conventus it belonged to (e.g. Conventus Gaditanus)." ;
              rdfs:label "in conventus"@en .
 
@@ -44,7 +50,13 @@ cucoo:hasAdministrativeOrganisation rdf:type owl:ObjectProperty .
 :inProvince rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf cucoo:hasAdministrativeOrganisation ;
             rdfs:domain cucoo:Settlement ;
-            rdfs:range :Province ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty cucoo:hasAdministrativeDenomination ;
+                         owl:allValuesFrom [ rdf:type owl:Class ;
+                                             owl:oneOf ( :Province
+                                                       )
+                                           ]
+                       ] ;
             rdfs:comment "Relates a settlement to the Roman province it belonged to."@en ;
             rdfs:label "in province"@en .
 
@@ -75,32 +87,6 @@ cucoo:SettlementLegalStatus rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text
 cucoo:Text rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus
-:Conventus rdf:type owl:Class ,
-                    owl:NamedIndividual ;
-           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                 owl:onProperty cucoo:hasAdministrativeDenomination ;
-                                 owl:someValuesFrom [ rdf:type owl:Class ;
-                                                      owl:oneOf ( :Conventus
-                                                                )
-                                                    ]
-                               ] ;
-           rdfs:subClassOf cucoo:SettlementAdministrativeOrganisation .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province
-:Province rdf:type owl:Class ,
-                   owl:NamedIndividual ;
-          owl:equivalentClass [ rdf:type owl:Restriction ;
-                                owl:onProperty cucoo:hasAdministrativeDenomination ;
-                                owl:someValuesFrom [ rdf:type owl:Class ;
-                                                     owl:oneOf ( :Province
-                                                               )
-                                                   ]
-                              ] ;
-          rdfs:subClassOf cucoo:SettlementAdministrativeOrganisation .
 
 
 #################################################################
@@ -262,20 +248,6 @@ cucoo:Text rdf:type owl:Class .
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Turduli
 :Turduli rdf:type owl:NamedIndividual ,
                   cucoo:EthnicIdentity .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-:Conventus rdfs:label "Conventus"@la ,
-                      "Conventus"@en ;
-           rdfs:comment "Roman administrative entitiy of control over the territory, smaller than a province, that referred to the assembly of communities of indigenous and Roman citizens."@en .
-
-
-:Province rdfs:comment "Roman territorial administrative demarcation of the territory." ;
-          rdfs:label "Provincia"@la ,
-                     "Province"@en .
 
 
 #################################################################
