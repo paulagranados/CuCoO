@@ -5,11 +5,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cucoo: <http://www.semanticweb.org/paulagranadosgarcia/CuCoO/> .
-@base <http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman> .
+@base <http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/> .
 
-<http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman> rdf:type owl:Ontology ;
-                                                                  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/2.0/> ;
-                                                                  rdfs:comment "A module that collects CuCoO concepts that relate to cultural contact studies in Ancient Rome." .
+<http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/> rdf:type owl:Ontology ;
+                                                                   <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/2.0/> ;
+                                                                   rdfs:comment "A module that collects CuCoO concepts that relate to cultural contact studies in Ancient Rome." .
 
 #################################################################
 #    Annotation properties
@@ -35,13 +35,7 @@ cucoo:hasAdministrativeOrganisation rdf:type owl:ObjectProperty .
 :inConventus rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf cucoo:hasAdministrativeOrganisation ;
              rdfs:domain cucoo:Settlement ;
-             rdfs:range [ rdf:type owl:Restriction ;
-                          owl:onProperty cucoo:hasAdministrativeDenomination ;
-                          owl:allValuesFrom [ rdf:type owl:Class ;
-                                              owl:oneOf ( :Conventus
-                                                        )
-                                            ]
-                        ] ;
+             rdfs:range :Conventus ;
              rdfs:comment "relates a settlement (e.g. Gades) with the conventus it belonged to (e.g. Conventus Gaditanus)." ;
              rdfs:label "in conventus"@en .
 
@@ -50,13 +44,7 @@ cucoo:hasAdministrativeOrganisation rdf:type owl:ObjectProperty .
 :inProvince rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf cucoo:hasAdministrativeOrganisation ;
             rdfs:domain cucoo:Settlement ;
-            rdfs:range [ rdf:type owl:Restriction ;
-                         owl:onProperty cucoo:hasAdministrativeDenomination ;
-                         owl:allValuesFrom [ rdf:type owl:Class ;
-                                             owl:oneOf ( :Province
-                                                       )
-                                           ]
-                       ] ;
+            rdfs:range :Province ;
             rdfs:comment "Relates a settlement to the Roman province it belonged to."@en ;
             rdfs:label "in province"@en .
 
@@ -87,6 +75,30 @@ cucoo:SettlementLegalStatus rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text
 cucoo:Text rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus
+:Conventus rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty cucoo:hasAdministrativeDenomination ;
+                                 owl:someValuesFrom [ rdf:type owl:Class ;
+                                                      owl:oneOf ( :Conventus
+                                                                )
+                                                    ]
+                               ] ;
+           rdfs:subClassOf cucoo:SettlementAdministrativeOrganisation .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province
+:Province rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty cucoo:hasAdministrativeDenomination ;
+                                owl:someValuesFrom [ rdf:type owl:Class ;
+                                                     owl:oneOf ( :Province
+                                                               )
+                                                   ]
+                              ] ;
+          rdfs:subClassOf cucoo:SettlementAdministrativeOrganisation .
 
 
 #################################################################
@@ -248,6 +260,16 @@ cucoo:Text rdf:type owl:Class .
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Turduli
 :Turduli rdf:type owl:NamedIndividual ,
                   cucoo:EthnicIdentity .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Conventus rdfs:label "Conventus"@en .
+
+
+:Province rdfs:label "Province"@en .
 
 
 #################################################################
