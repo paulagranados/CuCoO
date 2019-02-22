@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/"
+     xml:base="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cucoo="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman">
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/2.0/"/>
+        <rdfs:comment>A module that collects CuCoO concepts that relate to cultural contact studies in Ancient Rome.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeDenomination -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeDenomination"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeOrganisation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeOrganisation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/inConventus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/inConventus">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeOrganisation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus"/>
+        <rdfs:comment>relates a settlement (e.g. Gades) with the conventus it belonged to (e.g. Conventus Gaditanus).</rdfs:comment>
+        <rdfs:label xml:lang="en">in conventus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/inProvince -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/inProvince">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeOrganisation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province"/>
+        <rdfs:comment xml:lang="en">Relates a settlement to the Roman province it belonged to.</rdfs:comment>
+        <rdfs:label xml:lang="en">in province</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/AdministrativeDenomination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/AdministrativeDenomination"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementAdministrativeOrganisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementAdministrativeOrganisation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementLegalStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementLegalStatus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeDenomination"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementAdministrativeOrganisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeDenomination"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementAdministrativeOrganisation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Bastetani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Bastetani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Civitas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Civitas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementLegalStatus"/>
+        <rdfs:comment xml:lang="en">Lowest legal status granted to a settlement.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Colonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Colonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementLegalStatus"/>
+        <rdfs:comment xml:lang="en">City founded ex-novo by Roman colonisers or highest legal status granted to a settlement.</rdfs:comment>
+        <rdfs:label xml:lang="la">Colonia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/AdministrativeDenomination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Astigitanus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Astigitanus">
+        <cucoo:hasAdministrativeDenomination rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus"/>
+        <rdfs:label xml:lang="la">Conventus Astigitanus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Cordubensis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Cordubensis">
+        <cucoo:hasAdministrativeDenomination rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus"/>
+        <rdfs:label xml:lang="la">Conventus Cordubensis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Gaditanus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Gaditanus">
+        <cucoo:hasAdministrativeDenomination rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus"/>
+        <rdfs:label xml:lang="la">Conventus Gaditanus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Hispalensis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Hispalensis">
+        <cucoo:hasAdministrativeDenomination rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus"/>
+        <rdfs:label xml:lang="la">Conventus Hispalensis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Greeks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Greeks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Baetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Baetica">
+        <cucoo:hasAdministrativeDenomination rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province"/>
+        <rdfs:label xml:lang="la">Hispania Baetica</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Citerior -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Citerior">
+        <cucoo:hasAdministrativeDenomination rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province"/>
+        <rdfs:label xml:lang="la">Hispania Citerior</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Tarraconensis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Tarraconensis">
+        <cucoo:hasAdministrativeDenomination rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province"/>
+        <rdfs:label xml:lang="la">Hispania Tarraconensis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Ulterior -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Ulterior">
+        <cucoo:hasAdministrativeDenomination rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province"/>
+        <rdfs:label xml:lang="la">Hispania Ulterior</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/IberianText -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/IberianText">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Iberians -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Iberians">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Latin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Latin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/LatinText -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/LatinText">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Mansio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Mansio">
+        <rdfs:label xml:lang="la">Mansio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Municipium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Municipium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementLegalStatus"/>
+        <rdfs:comment xml:lang="en">City-states with walls brought into the city-state of Rome and under the Roman jurisdiction but remaining independent in some aspects.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Oppidum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Oppidum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementLegalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Oretani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Oretani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/PhoenicianText -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/PhoenicianText">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Phoenicians -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Phoenicians">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/AdministrativeDenomination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/PunicText -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/PunicText">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Punics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Punics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Romans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Romans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Turdetani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Turdetani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Turduli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Turduli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus">
+        <rdfs:label xml:lang="la">Conventus</rdfs:label>
+        <rdfs:label xml:lang="en">Conventus</rdfs:label>
+        <rdfs:comment xml:lang="en">Roman administrative entitiy of control over the territory, smaller than a province, that referred to the assembly of communities of indigenous and Roman citizens.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province">
+        <rdfs:comment>Roman territorial administrative demarcation of the territory.</rdfs:comment>
+        <rdfs:label xml:lang="la">Provincia</rdfs:label>
+        <rdfs:label xml:lang="en">Province</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Cordubensis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Gaditanus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Hispalensis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Ulterior"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Baetica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Citerior"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Tarraconensis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Ulterior"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

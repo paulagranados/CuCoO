@@ -1,0 +1,303 @@
+@prefix : <http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cucoo: <http://www.semanticweb.org/paulagranadosgarcia/CuCoO/> .
+@base <http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman> .
+
+<http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman> rdf:type owl:Ontology ;
+                                                                  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/2.0/> ;
+                                                                  rdfs:comment "A module that collects CuCoO concepts that relate to cultural contact studies in Ancient Rome." .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeDenomination
+cucoo:hasAdministrativeDenomination rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeOrganisation
+cucoo:hasAdministrativeOrganisation rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/inConventus
+:inConventus rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf cucoo:hasAdministrativeOrganisation ;
+             rdfs:domain cucoo:Settlement ;
+             rdfs:range :Conventus ;
+             rdfs:comment "relates a settlement (e.g. Gades) with the conventus it belonged to (e.g. Conventus Gaditanus)." ;
+             rdfs:label "in conventus"@en .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/inProvince
+:inProvince rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf cucoo:hasAdministrativeOrganisation ;
+            rdfs:domain cucoo:Settlement ;
+            rdfs:range :Province ;
+            rdfs:comment "Relates a settlement to the Roman province it belonged to."@en ;
+            rdfs:label "in province"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/AdministrativeDenomination
+cucoo:AdministrativeDenomination rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity
+cucoo:EthnicIdentity rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement
+cucoo:Settlement rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementAdministrativeOrganisation
+cucoo:SettlementAdministrativeOrganisation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SettlementLegalStatus
+cucoo:SettlementLegalStatus rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Text
+cucoo:Text rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus
+:Conventus rdf:type owl:Class ,
+                    owl:NamedIndividual ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty cucoo:hasAdministrativeDenomination ;
+                                 owl:someValuesFrom [ rdf:type owl:Class ;
+                                                      owl:oneOf ( :Conventus
+                                                                )
+                                                    ]
+                               ] ;
+           rdfs:subClassOf cucoo:SettlementAdministrativeOrganisation .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province
+:Province rdf:type owl:Class ,
+                   owl:NamedIndividual ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty cucoo:hasAdministrativeDenomination ;
+                                owl:someValuesFrom [ rdf:type owl:Class ;
+                                                     owl:oneOf ( :Province
+                                                               )
+                                                   ]
+                              ] ;
+          rdfs:subClassOf cucoo:SettlementAdministrativeOrganisation .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Bastetani
+:Bastetani rdf:type owl:NamedIndividual ,
+                    cucoo:EthnicIdentity .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Civitas
+:Civitas rdf:type owl:NamedIndividual ,
+                  cucoo:SettlementLegalStatus ;
+         rdfs:comment "Lowest legal status granted to a settlement."@en .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Colonia
+:Colonia rdf:type owl:NamedIndividual ,
+                  cucoo:SettlementLegalStatus ;
+         rdfs:comment "City founded ex-novo by Roman colonisers or highest legal status granted to a settlement."@en ;
+         rdfs:label "Colonia"@la .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus
+:Conventus rdf:type owl:NamedIndividual ,
+                    cucoo:AdministrativeDenomination .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Astigitanus
+:Conventus_Astigitanus rdf:type owl:NamedIndividual ;
+                       cucoo:hasAdministrativeDenomination :Conventus ;
+                       rdfs:label "Conventus Astigitanus"@la .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Cordubensis
+:Conventus_Cordubensis rdf:type owl:NamedIndividual ;
+                       cucoo:hasAdministrativeDenomination :Conventus ;
+                       rdfs:label "Conventus Cordubensis"@la .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Gaditanus
+:Conventus_Gaditanus rdf:type owl:NamedIndividual ;
+                     cucoo:hasAdministrativeDenomination :Conventus ;
+                     rdfs:label "Conventus Gaditanus"@la .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Conventus_Hispalensis
+:Conventus_Hispalensis rdf:type owl:NamedIndividual ;
+                       cucoo:hasAdministrativeDenomination :Conventus ;
+                       rdfs:label "Conventus Hispalensis"@la .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Greeks
+:Greeks rdf:type owl:NamedIndividual ,
+                 cucoo:EthnicIdentity .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Baetica
+:Hispania_Baetica rdf:type owl:NamedIndividual ;
+                  cucoo:hasAdministrativeDenomination :Province ;
+                  rdfs:label "Hispania Baetica"@la .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Citerior
+:Hispania_Citerior rdf:type owl:NamedIndividual ;
+                   cucoo:hasAdministrativeDenomination :Province ;
+                   rdfs:label "Hispania Citerior"@la .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Tarraconensis
+:Hispania_Tarraconensis rdf:type owl:NamedIndividual ;
+                        cucoo:hasAdministrativeDenomination :Province ;
+                        rdfs:label "Hispania Tarraconensis"@la .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Hispania_Ulterior
+:Hispania_Ulterior rdf:type owl:NamedIndividual ;
+                   cucoo:hasAdministrativeDenomination :Province ;
+                   rdfs:label "Hispania Ulterior"@la .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/IberianText
+:IberianText rdf:type owl:NamedIndividual ,
+                      cucoo:Text .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Iberians
+:Iberians rdf:type owl:NamedIndividual ,
+                   cucoo:EthnicIdentity .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Latin
+:Latin rdf:type owl:NamedIndividual ,
+                cucoo:Text .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/LatinText
+:LatinText rdf:type owl:NamedIndividual ,
+                    cucoo:Text .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Mansio
+:Mansio rdf:type owl:NamedIndividual ;
+        rdfs:label "Mansio"@la .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Municipium
+:Municipium rdf:type owl:NamedIndividual ,
+                     cucoo:SettlementLegalStatus ;
+            rdfs:comment "City-states with walls brought into the city-state of Rome and under the Roman jurisdiction but remaining independent in some aspects."@en .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Oppidum
+:Oppidum rdf:type owl:NamedIndividual ,
+                  cucoo:SettlementLegalStatus .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Oretani
+:Oretani rdf:type owl:NamedIndividual ,
+                  cucoo:EthnicIdentity .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/PhoenicianText
+:PhoenicianText rdf:type owl:NamedIndividual ,
+                         cucoo:Text .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Phoenicians
+:Phoenicians rdf:type owl:NamedIndividual ,
+                      cucoo:EthnicIdentity .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Province
+:Province rdf:type owl:NamedIndividual ,
+                   cucoo:AdministrativeDenomination .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/PunicText
+:PunicText rdf:type owl:NamedIndividual ,
+                    cucoo:Text .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Punics
+:Punics rdf:type owl:NamedIndividual ,
+                 cucoo:EthnicIdentity .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Romans
+:Romans rdf:type owl:NamedIndividual ,
+                 cucoo:EthnicIdentity .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Turdetani
+:Turdetani rdf:type owl:NamedIndividual ,
+                    cucoo:EthnicIdentity .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ext/roman/Turduli
+:Turduli rdf:type owl:NamedIndividual ,
+                  cucoo:EthnicIdentity .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Conventus rdfs:label "Conventus"@la ,
+                      "Conventus"@en ;
+           rdfs:comment "Roman administrative entitiy of control over the territory, smaller than a province, that referred to the assembly of communities of indigenous and Roman citizens."@en .
+
+
+:Province rdfs:comment "Roman territorial administrative demarcation of the territory." ;
+          rdfs:label "Provincia"@la ,
+                     "Province"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Conventus_Cordubensis
+                        :Conventus_Gaditanus
+                        :Conventus_Hispalensis
+                        :Hispania_Ulterior
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Hispania_Baetica
+                        :Hispania_Citerior
+                        :Hispania_Tarraconensis
+                        :Hispania_Ulterior
+                      )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
