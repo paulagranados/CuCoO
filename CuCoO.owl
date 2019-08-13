@@ -154,6 +154,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContact -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContact">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContact"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalIdentity -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalIdentity">
@@ -416,15 +425,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Equal -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Equal">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Unequal"/>
-        <rdfs:comment>Relationship in which all groups involved in the cultural contact situation are at the same level.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity">
@@ -512,14 +512,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PersonLegalStatus -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PersonLegalStatus">
-        <rdfs:comment>Person legal status according to Roman law.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PhysicalAppearance -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PhysicalAppearance">
@@ -583,14 +575,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Trade">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactContext"/>
         <rdfs:comment>The cultural contact situation happens during a process of trade (e.g. Phoenician and Greek settlements in the peninsula).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Unequal -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Unequal">
-        <rdfs:comment>Relationship in which the groups involved are in different  levels (e.g. one group is under the control of other group).</rdfs:comment>
     </owl:Class>
     
 
