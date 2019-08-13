@@ -4,10 +4,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
 @base <http://www.semanticweb.org/paulagranadosgarcia/CuCoO/> .
 
 <http://www.semanticweb.org/paulagranadosgarcia/CuCoO/> rdf:type owl:Ontology ;
-                                                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/2.0/> ;
+                                                         terms:license <https://creativecommons.org/licenses/by-sa/2.0/> ;
                                                          rdfs:comment "This ontology defines main concepts related to cross-culutral contact in antiquity."@en .
 
 #################################################################
@@ -15,36 +16,33 @@
 #################################################################
 
 ###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+terms:license rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsAccesories
-:ShowsAccesories rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :ShowsPhysicalAppearance .
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/InConventus
+:InConventus rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasAdministrativeOrganisation ;
+             rdfs:domain :Settlement ;
+             rdfs:comment "It relates the settlement with the conventus it belonged to (e.g. Astigi belonged to Conventus Astigitanus)." .
 
 
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsHairstyle
-:ShowsHairstyle rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :ShowsPhysicalAppearance ;
-                rdfs:comment "Relates a person with the hair style they display" .
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/InProvince
+:InProvince rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasAdministrativeOrganisation ;
+            rdfs:domain :Settlement ;
+            rdfs:comment "It relates a settlement with the province it belonged to (e.g. Gades belonged to Provincia Ulterior and later Provincia Baetica)." .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance
 :ShowsPhysicalAppearance rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf :hasTrait ;
+                         rdfs:subPropertyOf :hasCulturalTrait ;
                          rdfs:domain <http://erlangen-crm.org/current/E21_Person> ;
                          rdfs:range :PhysicalAppearance ;
                          rdfs:comment "Relates a person with the physical appearance it displays." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPosture
-:ShowsPosture rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :ShowsPhysicalAppearance ;
-              rdfs:comment "Relates a person with the posture they display." .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Wears
@@ -53,6 +51,13 @@
        rdfs:domain <http://erlangen-crm.org/current/E21_Person> ;
        rdfs:range :Clothes ;
        rdfs:comment "Relates a person with the clothes they wear." .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAccessories
+:hasAccessories rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :ShowsPhysicalAppearance ;
+                rdfs:domain <http://erlangen-crm.org/current/E21_Person> ;
+                rdfs:range :Accesories .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeOrganisation
@@ -71,7 +76,7 @@
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCarving
 :hasCarving rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :hasTrait ;
+            rdfs:subPropertyOf :hasCulturalTrait ;
             rdfs:domain :Object ;
             rdfs:range :Carving ;
             rdfs:comment "Relates an object with the type of carving that it displays (e.g. low relief)." .
@@ -79,7 +84,7 @@
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasContent
 :hasContent rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :hasTrait ;
+            rdfs:subPropertyOf :hasText ;
             rdfs:domain :Text ;
             rdfs:comment "Relates any type of text with its content." .
 
@@ -88,24 +93,58 @@
 :hasContext rdf:type owl:ObjectProperty ;
             rdfs:domain :CulturalAgent ;
             rdfs:range :CulturalContactContext ;
-            rdfs:comment "Relates a CulturalConceptAgent (e.g. sculpture) with the CulturalContact Context whose finding is related to (e.g. war)." .
+            rdfs:comment "Relates a CulturalConceptAgent (e.g. sculpture) with the CulturalContact Context whose finding is related to (e.g. conquest)." .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalAssociation
+:hasCulturalAssociation rdf:type owl:ObjectProperty ;
+                        rdfs:domain :CulturalAgent ;
+                        rdfs:comment "Relates an object with a culutral Association (e.g. Sculpture has culutral association clothing)." .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalContact
+:hasCulturalContact rdf:type owl:ObjectProperty ;
+                    rdfs:domain :CulturalContact ;
+                    rdfs:range :CulturalAgent .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalIdentity
+:hasCulturalIdentity rdf:type owl:ObjectProperty ;
+                     rdfs:domain :CulturalAgent ;
+                     rdfs:range :CulturalIdentity ;
+                     rdfs:comment "Relates a Cultural Trait with the cultural Identitiy it is associated with (e.g. Toga has cultural identitity Roman)." .
+
+
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalTrait
+:hasCulturalTrait rdf:type owl:ObjectProperty ;
+                  rdfs:domain :CulturalAgent ;
+                  rdfs:range :CulturalContactTrait .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasEthnicIdentity
 :hasEthnicIdentity rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasCulturalIdentity ;
                    rdfs:domain <http://erlangen-crm.org/current/E21_Person> ;
                    rdfs:range :EthnicIdentity .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasGenderIdentity
 :hasGenderIdentity rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasCulturalIdentity ;
                    rdfs:domain <http://erlangen-crm.org/current/E21_Person> ;
                    rdfs:range :GenderIdentity .
 
 
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasHairStyle
+:hasHairStyle rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :ShowsPhysicalAppearance ;
+              rdfs:domain <http://erlangen-crm.org/current/E21_Person> ;
+              rdfs:range :Hairstyle .
+
+
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasIconography
 :hasIconography rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :hasTrait ;
+                rdfs:subPropertyOf :hasCulturalTrait ;
                 rdfs:domain :Object ;
                 rdfs:range :Iconography ;
                 rdfs:comment "Relates a sculpture, a coin or a EpigraphicInscription with the iconography that it displays." .
@@ -113,74 +152,41 @@
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasLanguage
 :hasLanguage rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :hasTrait ;
+             rdfs:subPropertyOf :hasText ;
              rdfs:domain :Text ;
              rdfs:comment "Relates a text with the language it displays." .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMaterial
 :hasMaterial rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :hasTrait ;
+             rdfs:subPropertyOf :hasCulturalTrait ;
              rdfs:domain :Object ;
              rdfs:range :Material ;
              rdfs:comment "Relates epigraphicinscription, coin and sculpture to the material they are made of." .
 
 
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMeasure
-:hasMeasure rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :hasTrait ;
-            rdfs:domain :Object ;
-            rdfs:range :Measure ;
-            rdfs:comment "Relates sculpture, coin and epigraphicinscription to their measures." .
-
-
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasMetrology
 :hasMetrology rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :hasTrait ;
+              rdfs:subPropertyOf :hasCulturalTrait ;
               rdfs:domain :Coin ;
               rdfs:comment "Relates a mint with its metrology." .
 
 
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasRelationship
-:hasRelationship rdf:type owl:ObjectProperty ;
-                 rdfs:domain :CulturalAgent ;
-                 rdfs:range :CulturalContactRelationship ;
-                 rdfs:comment "It relates a cultural contact recipient to the kind of cultural contact relationship it is related to." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasReligiousIdentity
-:hasReligiousIdentity rdf:type owl:ObjectProperty ;
-                      rdfs:domain <http://erlangen-crm.org/current/E21_Person> ;
-                      rdfs:range :ReligiousIdentity .
-
-
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasSettlementLegalStatus
 :hasSettlementLegalStatus rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf :hasTrait ;
+                          rdfs:subPropertyOf :hasCulturalTrait ;
                           rdfs:domain :Settlement ;
                           rdfs:range :SettlementLegalStatus ;
                           rdfs:comment "Relates a settlement with the legal status it recived under Roman adiministration." .
 
 
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasSocialIdentity
-:hasSocialIdentity rdf:type owl:ObjectProperty ;
-                   rdfs:domain <http://erlangen-crm.org/current/E21_Person> ;
-                   rdfs:range :SocialIdentity .
-
-
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasText
 :hasText rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :hasTrait ;
-         rdfs:domain :Object ;
+         rdfs:subPropertyOf :hasCulturalTrait ;
+         rdfs:domain :Object ,
+                     :Settlement ;
          rdfs:range :Text ;
          rdfs:comment "Relates an epigraphic inscription or a coin with the text it displays." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasTrait
-:hasTrait rdf:type owl:ObjectProperty ;
-          rdfs:domain :CulturalAgent ;
-          rdfs:range :CulturalContactTrait ;
-          rdfs:comment "Relates a CulturalContactRecipient with the CultursalTrait it displays." .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/isAssociatedWith
@@ -216,7 +222,6 @@
          rdfs:subClassOf :CulturalContactTrait .
 
 
-
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Clothes
 :Clothes rdf:type owl:Class ;
          rdfs:subClassOf :PhysicalAppearance .
@@ -235,13 +240,11 @@
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalAgent
 :CulturalAgent rdf:type owl:Class ;
-               rdfs:subClassOf :Entity ;
                rdfs:comment "Refers to things and people that embody and enact cultural meaning." .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContact
 :CulturalContact rdf:type owl:Class ;
-                 rdfs:subClassOf :Entity ;
                  rdfs:comment "Refers to the phenomenon of interaction amongst at least two communities with different cultural and ethnical backgrounds." .
 
 
@@ -260,14 +263,7 @@
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactFeature
 :CulturalContactFeature rdf:type owl:Class ;
-                        rdfs:subClassOf :Entity ;
                         rdfs:comment "Refers to any cultural contact feature that can be identified in the entities. For example, cultural contact traits or cultural contact aspects." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactRelationship
-:CulturalContactRelationship rdf:type owl:Class ;
-                             rdfs:subClassOf :CulturalContactFeature ;
-                             rdfs:comment "Relationship established amongst the different groups involved in the cultural contact situation." .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait
@@ -278,30 +274,12 @@
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalIdentity
 :CulturalIdentity rdf:type owl:Class ;
-                  rdfs:subClassOf :Entity ;
                   rdfs:comment "Self-conscious association of a group or a person with a culturally constructed group identitiy that intersect with others in the identification of, and interaction, between groups.Refers to the elements that constitue a person cultural identity." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Economic
-:Economic rdf:type owl:Class ;
-          rdfs:subClassOf :CulturalContactAspects ;
-          rdfs:comment "An economic relationship amongst the different culutral groups can be demonstrated in the evidence (e.g. coins distribution)." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Entity
-:Entity rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EpigraphicInscription
 :EpigraphicInscription rdf:type owl:Class ;
                        rdfs:subClassOf :Object .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Equal
-:Equal rdf:type owl:Class ;
-       rdfs:subClassOf :CulturalContactRelationship ;
-       owl:disjointWith :Unequal ;
-       rdfs:comment "Relationship in which all groups involved in the cultural contact situation are at the same level." .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/EthnicIdentity
@@ -321,6 +299,12 @@
            rdfs:subClassOf :PhysicalAppearance .
 
 
+###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Iconographic
+:Iconographic rdf:type owl:Class ;
+              rdfs:subClassOf :CulturalContactAspects ;
+              rdfs:comment "Iconographic influence amongst the different cultural groups can be demonstrated in  the evidence (e.g. spread of iconographic patterns)." .
+
+
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Iconography
 :Iconography rdf:type owl:Class ;
              rdfs:subClassOf :CulturalContactTrait .
@@ -336,23 +320,12 @@
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Linguistic
 :Linguistic rdf:type owl:Class ;
             rdfs:subClassOf :CulturalContactAspects ;
-            rdfs:comment "Linguistic influence amongst the different cultural groups can be demonstrated int he evidence (e.g. bilingual inscriptions or use of foreign alphabets to record indigenous onomastica)." .
+            rdfs:comment "Linguistic influence amongst the different cultural groups can be demonstrated in the evidence (e.g. bilingual inscriptions or use of foreign alphabets to record indigenous onomastica)." .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Material
 :Material rdf:type owl:Class ;
           rdfs:subClassOf :CulturalContactTrait .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Measure
-:Measure rdf:type owl:Class ;
-         rdfs:subClassOf :CulturalContactTrait .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Migration
-:Migration rdf:type owl:Class ;
-           rdfs:subClassOf :CulturalContactContext ;
-           rdfs:comment "The cultural contact situation happens during a process of migration." .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Object
@@ -366,33 +339,10 @@
                           rdfs:comment "Situation of cultural contact (e.g. Roman conquest of the Iberian Peninsula) where there is evidence for cultural influence (e.g. appearance of Roman influences in the material culture)." .
 
 
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PersonLegalStatus
-:PersonLegalStatus rdf:type owl:Class ;
-                   rdfs:subClassOf :SocialIdentity ;
-                   rdfs:comment "Person legal status according to Roman law." .
-
-
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PhysicalAppearance
 :PhysicalAppearance rdf:type owl:Class ;
                     rdfs:subClassOf :CulturalContactTrait ;
                     rdfs:comment "Refers to all things that constitute one person’s appearance." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Posture
-:Posture rdf:type owl:Class ;
-         rdfs:subClassOf :PhysicalAppearance .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Religious
-:Religious rdf:type owl:Class ;
-           rdfs:subClassOf :CulturalContactAspects ;
-           rdfs:comment "An exchange of religous influences amongst the different cultural groups can be demonstrated in the evidence (e.g. syncretism between local and foreign deities)." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ReligiousIdentity
-:ReligiousIdentity rdf:type owl:Class ;
-                   rdfs:subClassOf :CulturalIdentity ;
-                   rdfs:comment "Refers to a person or a gruop believes and practices." .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Sculpture
@@ -416,18 +366,6 @@
                        rdfs:comment "City legal status according to Roman law." .
 
 
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Social
-:Social rdf:type owl:Class ;
-        rdfs:subClassOf :CulturalContactAspects ;
-        rdfs:comment "The evidence demonstrates exchange of social behaviours amongst the different cultural groups involved in the cultural contact situation (e.g. changes in the construction habits)." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/SocialIdentity
-:SocialIdentity rdf:type owl:Class ;
-                rdfs:subClassOf :CulturalIdentity ;
-                rdfs:comment "that aspect of a person conceptualization associated with its role in society." .
-
-
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Style
 :Style rdf:type owl:Class ;
        rdfs:subClassOf :CulturalContactTrait .
@@ -444,30 +382,12 @@
        rdfs:comment "The cultural contact situation happens during a process of trade (e.g. Phoenician and Greek settlements in the peninsula)." .
 
 
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Unequal
-:Unequal rdf:type owl:Class ;
-         rdfs:subClassOf :CulturalContactRelationship ;
-         rdfs:comment "Relationship in which the groups involved are in different  levels (e.g. one group is under the control of other group)." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/War
-:War rdf:type owl:Class ;
-     rdfs:subClassOf :CulturalContactContext ;
-     rdfs:comment "The cultural contact situation happens during a process of armed conflict (e.g. Punic settlements in Iberia)." .
-
-
-###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Weight
-:Weight rdf:type owl:Class ;
-        rdfs:subClassOf :CulturalContactTrait .
-
-
 #################################################################
 #    Individuals
 #################################################################
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Architecture
-:Architecture rdf:type owl:NamedIndividual ,
-                       :Measure .
+:Architecture rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Carving
@@ -536,13 +456,11 @@
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Material
-:Material rdf:type owl:NamedIndividual ,
-                   :Measure .
+:Material rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Metrology
-:Metrology rdf:type owl:NamedIndividual ,
-                    :Measure .
+:Metrology rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Military_Camp
@@ -595,4 +513,7 @@
 :Carving rdfs:comment "" .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+:Text rdfs:comment "Utterance or coherent set of written statements." .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
