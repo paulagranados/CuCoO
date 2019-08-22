@@ -324,6 +324,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Bilingualism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Bilingualism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Linguistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ByStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ByStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Iconographic"/>
+        <rdfs:comment>Icononographic contact by the transmision of themes depicted with the same iconogrpahic style (e.g. the representation of exactly the same image of Herakles Melkart with the same iconographic atributes between mints e.g. Carmo and Searo).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ByTheme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ByTheme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Iconographic"/>
+        <rdfs:comment>Iconogrpahic contact by the transmision of iconographic themes (e.g, the representation of Herakles Melkart with club or Herakles Melkart with leonte in two mints georahically close).</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Carving -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Carving">
@@ -491,6 +517,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Material">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/CulturalContactTrait"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MixedTexts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/MixedTexts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Linguistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Multilingualism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Multilingualism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Linguistic"/>
     </owl:Class>
     
 
