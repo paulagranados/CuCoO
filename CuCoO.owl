@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/"
      xml:base="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/">
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/2.0/"/>
         <rdfs:comment xml:lang="en">This ontology defines main concepts related to cross-culutral contact in antiquity.</rdfs:comment>
@@ -28,6 +28,36 @@
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Wears -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Wears">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAccesories -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAccesories">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasHairStyle -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasHairStyle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -58,38 +88,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAdministrativeOrganisation"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Settlement"/>
         <rdfs:comment>It relates a settlement with the province it belonged to (e.g. Gades belonged to Provincia Ulterior and later Provincia Baetica).</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalTrait"/>
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/PhysicalAppearance"/>
-        <rdfs:comment>Relates a person with the physical appearance it displays.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Wears -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Wears">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance"/>
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Clothes"/>
-        <rdfs:comment>Relates a person with the clothes they wear.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAccessories -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasAccessories">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance"/>
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Accesories"/>
     </owl:ObjectProperty>
     
 
@@ -198,16 +196,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasCulturalIdentity"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/GenderIdentity"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasHairStyle -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasHairStyle">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/ShowsPhysicalAppearance"/>
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/paulagranadosgarcia/CuCoO/Hairstyle"/>
     </owl:ObjectProperty>
     
 
@@ -836,5 +824,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
