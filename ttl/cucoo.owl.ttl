@@ -133,7 +133,7 @@ terms:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/paulagranadosgarcia/CuCoO/hasGenderIdentity
-:hasGenderIdentity rdf:type owl:ObjectProperty ;
+:hasGenderIdentity rdf:type rdf:Property ;
                    rdfs:subPropertyOf :hasCulturalIdentity ;
                    rdfs:domain <http://erlangen-crm.org/current/E21_Person> ;
                    rdfs:range :GenderIdentity .
