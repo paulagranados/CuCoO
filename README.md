@@ -8,7 +8,7 @@ LODE](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/paulagran
 
 The work-in-progress graph visualisation of the ontology can be viewed
 [through
-WebVoWL](http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/paulagranados/CuCoO/master/CuCoO.owl)
+WebVoWL](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/paulagranados/CuCoO/master/ttl/cucoo.owl.ttl)
 
 
  
